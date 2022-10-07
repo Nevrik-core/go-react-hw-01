@@ -4,7 +4,7 @@ import { UserStats } from "../UserStats/UserStats";
 import user from '../Profile/user.json';
 
 
-export const Profile = ({ profile: { username, tag, avatar, location } }) => {
+export const Profile = ({ username, tag, avatar, location }) => {
   return (
     <Container >
   <Descr >
@@ -25,7 +25,6 @@ export const Profile = ({ profile: { username, tag, avatar, location } }) => {
 
 
 Profile.propTypes = {
-  profile: PropTypes.exact({
   username: PropTypes.string,
   tag: PropTypes.string,
   location: PropTypes.string,
@@ -34,6 +33,5 @@ Profile.propTypes = {
     followers: PropTypes.number,
     views: PropTypes.number,
     likes: PropTypes.number
-  })
   }),
 }

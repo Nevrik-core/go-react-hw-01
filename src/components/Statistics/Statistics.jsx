@@ -1,5 +1,4 @@
-
-// import PropTypes, { shape } from 'prop-types';
+import PropTypes from 'prop-types';
 import { ContainerStats, StatTitle, StatList, StatItem, StatLabel, StatPercentage } from "./Statistics.styled";
 
 export const Statistics = ({ title, stats }) => {
@@ -20,14 +19,15 @@ export const Statistics = ({ title, stats }) => {
 };
 
 
-// Statistics.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   stats: PropTypes.arrayOf(PropTypes.exact({
-//     id: PropTypes.string,
-//     label: PropTypes.string,
-//     percentage: PropTypes.number,
-//   }))
-// };
+
+Statistics.propTypes = {
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(PropTypes.exact({
+    id: PropTypes.string,
+    label: PropTypes.string,
+    percentage: PropTypes.number,
+  }))
+};
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
