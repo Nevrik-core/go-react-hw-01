@@ -6,10 +6,11 @@ export const ContainerStats = styled.section`
     flex-direction: column;
     background-color: ${props => props.theme.colors.lighterBg};
     margin: 0 auto;
-    margin-top: 100px;
-    width: 400px;
+    margin-top: 50px;
+    max-width: 400px;
     margin-bottom: 50px;
     box-shadow: ${props => props.theme.filters.shadow};
+    
     
     /* border: 1px solid #bbb; */
 `;
@@ -17,6 +18,7 @@ export const ContainerStats = styled.section`
 export const StatTitle = styled.h2`
     font-weight: 300;
     text-align: center;
+    /* margin: 10px; */
 `;
 
 export const StatList = styled.ul`
@@ -31,13 +33,14 @@ export const StatList = styled.ul`
 export const StatItem = styled.li`
     color: white;
     font-weight: 400;
-    width: 100px;
-    padding: 12px;
+    width: 100%;
+    padding: 8px;
     text-align: center;
 `;
 
 export const StatLabel = styled.span`
-
+    /* width: 100px; */
+    /* margin: 20px; */
 `;
 
 export const StatPercentage = styled.span`

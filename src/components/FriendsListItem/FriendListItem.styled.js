@@ -11,6 +11,7 @@ export const ListItem = styled.li`
     align-items: center;
     box-shadow: ${props => props.theme.filters.shadow};
     border-radius: 4px;
+    
 `;
 
 export const ListStatus = styled.span`
