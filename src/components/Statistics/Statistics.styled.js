@@ -9,7 +9,9 @@ export const ContainerStats = styled.section`
     margin-top: 100px;
     width: 400px;
     margin-bottom: 50px;
-    border: 1px solid #bbb;
+    box-shadow: ${props => props.theme.filters.shadow};
+    
+    /* border: 1px solid #bbb; */
 `;
 
 export const StatTitle = styled.h2`

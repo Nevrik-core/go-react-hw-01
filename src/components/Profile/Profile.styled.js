@@ -7,8 +7,9 @@ export const Container = styled.div`
     width: 300px;
     margin-bottom: 50px;
     padding-top: 50px;
-    border: 1px solid #bbb;
+    /* border: 1px solid #bbb; */
     border-radius: 10px;
+    box-shadow: ${props => props.theme.filters.shadow};
     `;
 
 export const Descr = styled.div`

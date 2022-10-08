@@ -1,9 +1,10 @@
-
-export const FriendsListItem = ({avatar, name, isOnline}) => {
+import { ListItem, ListStatus, ListAvatar, ListName } from "./FriendListItem.styled";
+export const FriendsListItem = ({ avatar, name, isOnline }) => {
+    const statusColor = isOnline ? "green" : "red";
     return (
-        <li className="item">
-  <span className="status"></span>
-  <img className="avatar" src={avatar} alt="User avatar" width="48" />
-            <p className="name">{ name}</p>
-</li> );
+        <ListItem >
+  <ListStatus style={{backgroundColor:statusColor}} ></ListStatus>
+  <ListAvatar src={avatar} alt="User avatar" width="48"/>
+            <ListName >{ name}</ListName>
+</ListItem> );
 };
