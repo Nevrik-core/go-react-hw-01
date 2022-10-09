@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { Container, Descr, UserAvatar, UserName, TagLocation } from './Profile.styled';
 import { UserStats } from "../UserStats/UserStats";
-import user from '../Profile/user.json';
 
 
-export const Profile = ({ username, tag, avatar, location }) => {
+
+export const Profile = ({ username, tag, avatar, location, stats }) => {
   return (
     <Container >
        <Descr >
@@ -17,7 +17,7 @@ export const Profile = ({ username, tag, avatar, location }) => {
           <TagLocation >{location}</TagLocation>
        </Descr>
 
-          <UserStats profile={user}/>
+          <UserStats profile={stats}/>
     </Container>
   );
 };
