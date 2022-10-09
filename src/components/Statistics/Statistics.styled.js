@@ -10,15 +10,11 @@ export const ContainerStats = styled.section`
     max-width: 400px;
     margin-bottom: 50px;
     box-shadow: ${props => props.theme.filters.shadow};
-    
-    
-    /* border: 1px solid #bbb; */
 `;
 
 export const StatTitle = styled.h2`
     font-weight: 300;
     text-align: center;
-    /* margin: 10px; */
 `;
 
 export const StatList = styled.ul`

@@ -11,7 +11,7 @@ export const FriendList = ({friends}) => {
                     name={el.name}
                     isOnline={el.isOnline} />
             ))}
-        </ListContainer>)
+                 </ListContainer>)
 };
 
 

@@ -5,28 +5,17 @@ export const Statistics = ({ title, stats }) => {
     
   return (
     <ContainerStats >
-      {title && <StatTitle >{title}</StatTitle>}
-  <StatList >
-    {stats.map(stat => (
-        <StatItem key={stat.id} style={{backgroundColor:getRandomHexColor()}}>
-            <StatLabel >{stat.label}</StatLabel><br></br>
-            <StatPercentage > {stat.percentage }%</StatPercentage>
-        </StatItem>
-    ))}
-      </StatList>
-      </ContainerStats>
+        {title && <StatTitle >{title}</StatTitle>}
+        <StatList >
+          {stats.map(stat => (
+              <StatItem key={stat.id} style={{backgroundColor:getRandomHexColor()}}>
+                  <StatLabel >{stat.label}</StatLabel><br></br>
+                  <StatPercentage > {stat.percentage }%</StatPercentage>
+              </StatItem>
+          ))}
+        </StatList>
+    </ContainerStats>
   );
-};
-
-
-
-Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
-  stats: PropTypes.arrayOf(PropTypes.exact({
-    id: PropTypes.string,
-    label: PropTypes.string,
-    percentage: PropTypes.number,
-  }))
 };
 
 function getRandomHexColor() {
@@ -34,3 +23,13 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+
+Statistics.propTypes = {
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(PropTypes.exact({
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
+  }))
+};
+
